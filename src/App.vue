@@ -1,11 +1,10 @@
 <template>
   <div class="container">
     <div ref="window" class="window">
-      <div ref='header' class="header">Click here to move<i class="fa-solid fa-xmark"></i><i class="close fa fa-times no-print"></i></div>
+      <div ref='header' class="header">Drag here to move<i class="fa-solid fa-xmark"></i><i class="close fa fa-times no-print"></i></div>
       <div class="content">
         
-        <p>Drag on the coreners</p>
-        <p>to resize</p>
+        <p>Drag on the corenersto resize the window</p>
       </div>
     </div>
   </div>
