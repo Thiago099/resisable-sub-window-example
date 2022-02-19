@@ -108,11 +108,12 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
     corner4.addEventListener('mousedown',resizeYPositive())
 
     element.appendChild(corner4);
-    
+
     function get_int_style(key)
     {
         return parseInt(window.getComputedStyle(element).getPropertyValue(key));
     }
+    
     function resizeXPositive()
     {
         let offsetX
