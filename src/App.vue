@@ -74,6 +74,8 @@
   text-align: center;
   overflow: hidden;
   transition: background-color .2s;
+  background-color: #2196F3;
+
   border-radius: 0 5px 0 0;
   position: absolute; top: 0px; right: 0px;
 }
