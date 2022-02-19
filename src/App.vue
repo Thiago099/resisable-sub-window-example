@@ -3,7 +3,7 @@
     <div ref="window" class="window">
       <div ref='header' class="header">
         <div class="title"><img class = "icon" src="./assets/icon.svg" alt="vue logo"> Drag here to move</div>
-        <div class="close-button"><div>×</div></div>
+        <div class="close-button" @click="$refs.window.style.display = 'none'"><div>×</div></div>
       </div>
       <div class="content">
         
