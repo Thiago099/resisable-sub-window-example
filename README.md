@@ -1,8 +1,4 @@
-# drag and drop 
-
-a window example 
-
-## Project setup
+ ## Project setup
 ```
 yarn install
 ```
