@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <div ref="window" class="window">
-      <div ref='header' class="header">Drag here to move<i class="fa-solid fa-xmark"></i><i class="close fa fa-times no-print"></i></div>
+      <div ref='header' class="header">
+        <div class="title"><img class = "icon" src="./assets/icon.svg" alt="vue logo"> Drag here to move</div>
+        <div class="close-button"><div>×</div></div>
+      </div>
       <div class="content">
         
         <p>Drag on the corenersto resize the window</p>
@@ -32,25 +35,52 @@
   top: calc(50% - 500px / 2);
   width: 800px;
   height: 500px;
+  border-radius: 5px;
 
 }
 
 .content{
+  margin-top: 0px;
   overflow: auto;
   width: 100%;
   height: calc(100% - 45px); 
 }
-
+.header > .title{
+  margin-top: -8px;
+}
 .header {
+  border-radius: 5px 5px 0 0;
   padding: 10px;
   z-index: 10;
   background-color: #2196F3;
+  border:1px solid #2196F3;
   color: #fff;
-  height: 45px;
+  height: 30px;
+  
 }
-.close{
+.close-button{
   cursor: pointer;
   float: right;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  margin-right: 5px;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -27px;
+  margin-right: -11px;
+  transition: background-color .2s;
+  border-radius: 0 5px 0 0;
+}
+.close-button:hover{
+  background-color: red;
+}
+.close-button > div{
+  margin-top: -7px;
+}
+.icon{
+  width: 20px;
+  margin-top: -3px;
+  margin-left: -3px;
 }
 </style>
