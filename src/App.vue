@@ -46,7 +46,7 @@
   height: calc(100% - 45px); 
 }
 .header > .title{
-  margin-top: -8px;
+  margin-top: -9px;
 }
 .header {
   border-radius: 5px 5px 0 0;
