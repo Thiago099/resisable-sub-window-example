@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <div ref="window" class="window">
+    <div ref="window" class="window" v-show="display">
       <div ref='header' class="header">
         <div class="title"><img class = "icon" src="./assets/icon.svg" alt="vue logo"> Drag here to move</div>
-        <div class="close-button" @click="$refs.window.style.display = 'none'"><div>×</div></div>
+        <div class="close-button" @click="display = false"><div>×</div></div>
       </div>
       <div class="content">
-        
-        <p>Drag on the corenersto resize the window</p>
+        <p>Drag on the coreners to resize the window</p>
       </div>
     </div>
+    <div v-show="!display" class="pop-up" @click="display = true">re-open</div>
   </div>
 </template>
 
@@ -22,6 +22,11 @@
     mounted(){
       dragElement(this.$refs.window, this.$refs.header);
       resizeElement(this.$refs.window);
+    },
+    data(){
+      return{
+        display: true
+      }
     }
   }
 </script>
@@ -84,5 +89,29 @@
   width: 20px;
   margin-top: -3px;
   margin-left: -3px;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+.pop-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3em;
+    padding: 10px 40px 20px 40px;
+    border-radius: 10px;
+    transition: background-color .2s;
+    cursor: pointer;
+    border:1px solid #b8b8b8;
+}
+.pop-up:hover{
+  background-color: green;
+  color:white;
+
 }
 </style>
