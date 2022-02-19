@@ -69,15 +69,13 @@
   cursor: pointer;
   float: right;
   font-size: 1.6em;
-  margin-right: 5px;
   width: 50px;
   height: 30px;
   text-align: center;
   overflow: hidden;
-  margin-top: -27px;
-  margin-right: -11px;
   transition: background-color .2s;
   border-radius: 0 5px 0 0;
+  position: absolute; top: 0px; right: 0px;
 }
 .close-button:hover{
   background-color: red;
@@ -112,6 +110,12 @@
 .pop-up:hover{
   background-color: green;
   color:white;
-
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
 }
 </style>
