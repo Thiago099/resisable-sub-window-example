@@ -108,14 +108,14 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
     corner4.addEventListener('mousedown',resizeYPositive())
 
     element.appendChild(corner4);
-
+    
+    function get_int_style(key)
+    {
+        return parseInt(window.getComputedStyle(element).getPropertyValue(key));
+    }
     function resizeXPositive()
     {
         let offsetX
-        function get_int_style(key)
-        {
-            return parseInt(window.getComputedStyle(element).getPropertyValue(key));
-        }
         function dragMouseDown(e) {
             if(e.button !== 0) return
             e = e || window.event;
@@ -143,10 +143,6 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
     function resizeYPositive()
     {
         let offsetY
-        function get_int_style(key)
-        {
-            return parseInt(window.getComputedStyle(element).getPropertyValue(key));
-        }
         function dragMouseDown(e) {
             if(e.button !== 0) return
             e = e || window.event;
@@ -178,10 +174,6 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
         let startX
         let startW
         let maxX
-        function get_int_style(key)
-        {
-            return parseInt(window.getComputedStyle(element).getPropertyValue(key));
-        }
         function dragMouseDown(e) {
             if(e.button !== 0) return
             e = e || window.event;
@@ -219,10 +211,6 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
         let startY
         let startH
         let maxY
-        function get_int_style(key)
-        {
-            return parseInt(window.getComputedStyle(element).getPropertyValue(key));
-        }
         function dragMouseDown(e) {
             if(e.button !== 0) return
             e = e || window.event;
