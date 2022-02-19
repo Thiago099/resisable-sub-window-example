@@ -3,7 +3,9 @@
     <div ref="window" class="window" v-show="display">
       <div ref='header' class="header">
         <div class="title"><img class = "icon" src="./assets/icon.svg" alt="vue logo"> Drag here to move</div>
-        <div class="close-button" @click="display = false"><div>×</div></div>
+        <div class="nav-button close-button" @click="display = false"><div>×</div></div>
+        <div class="nav-button maximize-button" ><div>🗗</div></div>
+        <div class="nav-button minus-button" ><div>-</div></div>
       </div>
       <div class="content">
         <p>Drag on the coreners to resize the window</p>
@@ -65,26 +67,45 @@
   height: 30px;
   
 }
-.close-button{
+.nav-button{
   cursor: pointer;
   float: right;
   font-size: 1.6em;
-  width: 50px;
+  width: 30px;
   height: 30px;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: background-color .2s;
   background-color: #2196F3;
-
-  border-radius: 0 5px 0 0;
   position: absolute; top: 0px; right: 0px;
 }
-.close-button:hover{
-  background-color: red;
+.nav-button:hover{
+    background-color: #1d7cca;
+}
+.close-button{
+    border-radius: 0 5px 0 0;
 }
 .close-button > div{
   margin-top: -7px;
 }
+.close-button:hover{
+  background-color: red;
+}
+.maximize-button{
+  font-size: 14pt;
+  margin-right: 30px;
+}
+.maximize-button > div{
+  margin-top: -1px;
+}
+.minus-button{
+  font-size: 30pt;
+  margin-right: 60px;
+}
+.minus-button > div{
+  margin-top: -20px;
+}
+
 .icon{
   width: 20px;
   margin-top: -3px;
