@@ -3,9 +3,11 @@
     <div ref="window" class="window" v-show="display">
       <div ref='header' class="header">
         <div class="title"><img class = "icon" src="./assets/icon.svg" alt="vue logo"> Drag here to move</div>
-        <div class="nav-button close-button" @click="display = false"><div>×</div></div>
-        <div class="nav-button maximize-button" ><div>🗗</div></div>
-        <div class="nav-button minus-button" ><div>-</div></div>
+        <div @mousedown="preventDrag">
+          <div class="nav-button close-button" @click="display = false"><div>×</div></div>
+          <div class="nav-button maximize-button" ><div>🗗</div></div>
+          <div class="nav-button minus-button" ><div>-</div></div>
+        </div>
       </div>
       <div class="content">
         <p>Drag on the coreners to resize the window</p>
@@ -29,6 +31,12 @@
       return{
         display: true
       }
+    },
+    methods:{
+      preventDrag(event){
+        event.cancelBubble = true
+        event.preventDefault()
+      }
     }
   }
 </script>
@@ -45,7 +53,6 @@
   border-radius: 5px;
 
 }
-
 .content{
   margin-top: 0px;
   overflow: auto;
