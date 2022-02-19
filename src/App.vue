@@ -49,6 +49,8 @@
   margin-top: -9px;
 }
 .header {
+  overflow: hidden;
+
   border-radius: 5px 5px 0 0;
   padding: 10px;
   z-index: 10;
