@@ -109,10 +109,6 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
 
     element.appendChild(corner4);
 
-    
-
-
-
     function resizeXPositive()
     {
         let offsetX
@@ -143,6 +139,7 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
           }
         return dragMouseDown
     }
+
     function resizeYPositive()
     {
         let offsetY
@@ -174,6 +171,7 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
           }
         return dragMouseDown
     }
+
     function resizeXNegative()
     {
         let offsetX
@@ -214,6 +212,7 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
           }
         return dragMouseDown
     }
+
     function resizeYNegative()
     {
         let offsetY
@@ -254,6 +253,4 @@ export default function resizeElement(element, minW = 100, minH = 100, size = 20
           }
         return dragMouseDown
     }
-    
-
 }
