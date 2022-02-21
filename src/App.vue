@@ -5,8 +5,8 @@
         <div class="title"><img class = "icon" src="./assets/icon.svg" alt="vue logo"> Drag here to move</div>
         <div @mousedown="preventDrag">
           <div class="nav-button close-button" @click="display = false"><div>×</div></div>
-          <div class="nav-button maximize-button"><div>🗗</div></div>
-          <div class="nav-button minus-button" ><div>-</div></div>
+          <!--<div class="nav-button maximize-button"><div>🗗</div></div>
+          <div class="nav-button minus-button" ><div>-</div></div>-->
         </div>
       </div>
       <div class="content">
