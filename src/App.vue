@@ -5,7 +5,7 @@
         <div class="title"><img class = "icon" src="./assets/icon.svg" alt="vue logo"> Drag here to move</div>
         <div @mousedown="preventDrag">
           <div class="nav-button close-button" @click="display = false"><div>×</div></div>
-          <div class="nav-button maximize-button" @click="fullScreen()"><div>🗗</div></div>
+          <div class="nav-button maximize-button"><div>🗗</div></div>
           <div class="nav-button minus-button" ><div>-</div></div>
         </div>
       </div>
@@ -31,38 +31,12 @@
       return{
         display: true,
         full:false,
-        prevwidth:0,
-        prevheight:0,
-        preveleft:0,
-        prevtop:0
       }
     },
     methods:{
       preventDrag(event){
         event.cancelBubble = true
         event.preventDefault()
-      },
-      fullScreen()
-      {
-        this.full = !this.full
-        if(this.full)
-        {
-          this.prevwidth = this.$refs.window.style.width
-          this.prevheight = this.$refs.window.style.height
-          this.preveleft = this.$refs.window.style.left
-          this.prevtop = this.$refs.window.style.top
-          this.$refs.window.style.width = '99%'
-          this.$refs.window.style.height = '99%'
-          this.$refs.window.style.top = '0px'
-          this.$refs.window.style.left = '0px'
-        }
-        else
-        {
-          this.$refs.window.style.width = this.prevwidth
-          this.$refs.window.style.height = this.prevheight
-          this.$refs.window.style.top = this.prevtop
-          this.$refs.window.style.left = this.preveleft
-        }
       },
     }
   }
